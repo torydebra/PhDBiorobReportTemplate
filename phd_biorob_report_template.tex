@@ -10,9 +10,11 @@
 \usepackage[margin=2cm]{geometry}
 
 \usepackage{url}
-\usepackage{cite}
+\usepackage[hidelinks]{hyperref}
+%\usepackage{cite}
 \usepackage{xcolor}
 \usepackage{tabularx}
+\usepackage{booktabs} %for toprule, midrule of tab
 \usepackage{siunitx}
 \usepackage{setspace}
 \setstretch{1.0} 
@@ -20,14 +22,20 @@
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=4pt,parsep=2pt,topsep=2pt,leftmargin=0.5cm,labelsep=4pt}
 
+\usepackage{amsmath,amssymb}
+
 % setting Arial font
 \usepackage{fontspec}
 \usepackage{fontspec-luatex}
 \setmainfont{Arial} 
 % for Gantt charts
 \usepackage{pgfgantt}
-
+\usepackage{float}
 \usepackage{cleveref}
+\usepackage{csquotes}
+
+\usepackage{graphicx}
+\usepackage[font=footnotesize]{caption} 
 
 % colors
 \definecolor{barblue}{RGB}{153,204,254}
@@ -54,7 +62,13 @@
 \usepackage{pstricks}
 \usepackage{wasysym}
 
-\author{Your Name}
+\usepackage[backend=bibtex, style=ieee, maxbibnames=99]{biblatex}
+\addbibresource{refs/refs.bib}
+\DeclareBibliographyCategory{dontbib}
+\addtocategory{dontbib}{TPO, TPO2, TPO3, TPO4, TPOIRIM, LaserHumanoids, LaserJournal, Muratore2023, Bertoni2023, ROSEE, RoseePaper, RoseePaperLiana}
+\preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}
+
+\author{Davide Torielli}
 \title{Bioengineering and Robotics PhD annual report template}
 
 \titleformat{\section}
@@ -81,22 +95,22 @@
 
 \begin{center}
 	
-\LARGE{\textbf{Doctorate in Bioengineering and Robotics }\vspace{0.4cm}\\
-Curriculum: [curriculum name]}
+\LARGE{\textbf{PhD Program in Bioengineering and Robotics}\vspace{0.4cm}\\
+Curriculum: Advanced and Humanoid Robotics}
 
 \end{center}
 
 \begin{flushleft}
 \vspace{1.5cm}
-\large{\textbf{Student: }}\large{{[surname], [name]}}\vspace{0.2cm}\\
-\large{\textbf{Cycle: }}\large{[cycle number]}\vspace{0.2cm}\\
-\large{\textbf{Tutor(s): }}\large{{[surname], [name]}}\vspace{0.2cm}\\
-\large{\textbf{Year: }}\large{[academic year]}\vspace{0.2cm}\\
-\large{\textbf{Contacts: }}\large{{my.email@me.it}}
+\large{\textbf{Student: }}\large{{Torielli, Davide}}\vspace{0.2cm}\\
+\large{\textbf{Cycle: }}\large{XXXVI}\vspace{0.2cm}\\
+\large{\textbf{Tutors: }}\large{{Tsagarakis, Nikos and Muratore, Luca}}\vspace{0.2cm}\\
+\large{\textbf{Year: }}\large{3$^{rd}$}\vspace{0.2cm}\\
+\large{\textbf{Contacts: }}\large{{toridebraus@gmail.com}\qquad{davide.torielli@iit.it}}
 \end{flushleft}
 \clearpage
 \begin{center}
-	\textbf{\normalsize{Title of your research project\\ (tentative)}}
+	\textbf{\normalsize{Towards Shared Control Architectures ​for Intuitive Teleoperation of Complex Mobile Manipulators}}
 \end{center}
 
 \input{01-objective}
@@ -109,7 +123,8 @@ Curriculum: [curriculum name]}
 
 \cleardoublepage
 
-\bibliographystyle{unsrt}
-\bibliography{refs/refs.bib}
+%\bibliographystyle{unsrt}
+%\bibliography{refs/refs.bib}
+\printbibliography[notcategory=dontbib]
 
 \end{document}

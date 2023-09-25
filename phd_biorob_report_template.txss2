@@ -1,0 +1,94 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": "phd_biorob_report_template.pdf"
+    },
+    "Session": {
+        "Bookmarks": [
+            {
+                "bookmarkNumber": 7,
+                "fileName": "03-methodology.tex",
+                "lineNumber": 3,
+                "text": "03-methodology.tex\nProvide:"
+            }
+        ],
+        "CurrentFile": "05-training.tex",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "phd_biorob_report_template.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 23
+            },
+            {
+                "Col": 639,
+                "EditorGroup": 0,
+                "FileName": "01-objective.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 18
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "02-soa.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 1
+            },
+            {
+                "Col": 55,
+                "EditorGroup": 0,
+                "FileName": "03-methodology.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 160
+            },
+            {
+                "Col": 390,
+                "EditorGroup": 0,
+                "FileName": "04-results.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 77
+            },
+            {
+                "Col": 25,
+                "EditorGroup": 0,
+                "FileName": "05-training.tex",
+                "FirstLine": 14,
+                "FoldedLines": "",
+                "Line": 43
+            },
+            {
+                "Col": 0,
+                "EditorGroup": 0,
+                "FileName": "06-pub.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 0
+            },
+            {
+                "Col": 22,
+                "EditorGroup": 0,
+                "FileName": "07-activities.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 7
+            },
+            {
+                "Col": 15,
+                "EditorGroup": 0,
+                "FileName": "refs/refs.bib",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 2176
+            }
+        ],
+        "MasterFile": "",
+        "VerticalSplit": false
+    }
+}

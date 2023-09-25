@@ -1,90 +1,167 @@
 \section{Methodology and workplan}
 % [max 1.5 page]
 
-Provide: 
-\begin{itemize}
-	\item[-] Overview of the proposed approach you plan to follow (including methods and techniques)
-	\item[-] List of tasks organized in tables (see below). (For each task, brief summary of the progress of the research accomplishments (the details about the results achieved will be provided in Sect. 4). 
+%Provide: 
+%\begin{itemize}
+%	\item[-] Overview of the proposed approach you plan to follow (including methods and techniques)
+%	\item[-] List of tasks organized in tables (see below). (For each task, brief summary of the progress of the research accomplishments (the details about the results achieved will be provided in Sect. 4).
+%	
+%	Additionally, a Gantt chart is required (see below for an example).
+%\begin{figure}[h]
+%	\begin{center}
+%		\begin{ganttchart}[
+%			canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+%			hgrid style/.style={draw=black!40, line width=1.0pt},
+%			vgrid={*1{draw=black!40, line width=1.0pt}},
+%			today=11,
+%			today rule/.style={
+%				draw=black,
+%				dash pattern=on 3.5pt off 4.5pt,
+%				line width=1.8pt
+%			},
+%			y unit chart=1cm,
+%			today label font=\footnotesize\bfseries,
+%			title/.style={text=black, draw=black, fill=gray!30, font=\Large\bfseries, align=center},
+%			title label font=\bfseries\footnotesize,
+%			title label node/.append style={below=-7pt},
+%			title left shift=0.0,
+%			title top shift=0.2,
+%			include title in canvas=false,
+%			bar label font=\mdseries\small\color{black!90},
+%			bar/.append style={draw=none, fill=blue!40},
+%			bar incomplete/.append style={fill=lightblue!80},
+%			bar height=0.2,
+%			bar label node/.append style={left=0.2cm, fill=black!10},
+%			bar progress label font=\bfseries\small,
+%			bar progress label font=\mdseries\footnotesize\color{black!80},
+%			%	progress label text={\si{\percent}},
+%			group incomplete/.append style={fill=lightblue},
+%			group/.append style={
+%				fill=mydarkgreen!60, % Change this color for completed group bars
+%			},
+%			group left shift=0,
+%			group right shift=0,
+%			group label font=\mdseries\bfseries\small\color{black!90},
+%			group height=.3,
+%			group peaks tip position=0,
+%			group label node/.append style={left=0.4cm, fill=black!20},
+%			group progress label font=\mdseries\footnotesize\color{black!80},
+%			]{1}{12}
+%			\gantttitle[
+%			title label node/.append style={below left=-7pt and -7pt}
+%			]{Months:\quad1}{1}
+%			\gantttitlelist{2,...,12}{1} \\
+%			[grid]
+%			\ganttgroup[progress=61]{Macro-task 1}{1}{10} \\
+%			[grid]
+%			\ganttbar[
+%			progress=75,
+%			name=subtask1
+%			]{\textbf{Subtask 1.1}}{1}{8} \\
+%			[grid]
+%			\ganttbar[
+%			progress=47,
+%			name=subtask1
+%			]{\textbf{Subtask 1.2}}{4}{10}
+%		\end{ganttchart}
+%	\end{center}
+%	\caption{Example Gantt chart for your tasks.}
+%\end{figure}
+%
+%\end{itemize}
+
+To improve the current state of the art in telerobotics, the key challenges faced by this research are permitting the control of complex robots with the a minimum efforts from the user, hence developing intuitive interfaces and providing robot autonomy features.
+Physical human robot interaction has been considered, in the development of the TelePhysicalOperation interface, which permits to control the robot by applying virtual forces. The robot complies to these virtual forces as if they were real, like in a physical human-robot interaction. The interfaces has been enhanched with shared control techniques to share the control between the operator and the robot itself: for example, while the operator commands only the velocity of the end-effector, the robot generates arm commands and mobile base commands according to the arm manipulability level, letting the end-effector to reach the goal even if it is out of the reaching of the arm. Another example is the autonomous regulation of robot arms grasping forces to keep a carried load, while taking as input just the object velocity commanded by the operator. 
+To augment the user-robot interaction haptic solutions has been explored, to let the user perceive other kind of information other than the visual ones. 
+
+In parallel, another kind of interface has been developed: a novel teleoperation interface based on a visual servoing guidance with an inexpensive laser device, which further simplify the user interface, but requesting more robot autonomy which has been addressed with an architecture based on Behaviour Trees~\cite{Iovino2022}. Other than with complex robots, the interface has been evaluated with a simpler fixed manipulator, but showing the potentiality of this interface as an assistive device for impaired arm users.
 	
-	\begin{table}[h]
-		\begin{center}
-			\renewcommand{\arraystretch}{1.3} % Adjust the vertical spacing
-			\setlength{\tabcolsep}{8pt} % Adjust the horizontal spacing
-			\begin{tabular}{|P{15cm}|}
-				\hline
-				\textbf{Task name: ......................} \\ \hline
-				\textbf{Scheduling: }(e.g. month 1-12) \\ \hline
-				\textbf{Performed actions: }(3-4 lines)\\
-				\hline
-				\textbf{Status: }(e.g.: “successfully completed by month 12” or “the work has \\ started and proceeds as planned“ or “delay due to….”)\\
-				\hline
-				\textbf{Publications relative to the task: } (referring to the list in Sect. 6)\\
-				\hline
-				\textbf{Revised planning: }\\
-				\hline
-			\end{tabular}
-		\end{center}
-	\end{table}
-	Additionally, a Gantt chart is required (see below for an example).
-	\begin{figure}[h]
-		\begin{center}
-			\begin{ganttchart}[
-				canvas/.append style={fill=none, draw=black!5, line width=.75pt},
-				hgrid style/.style={draw=black!40, line width=1.0pt},
-				vgrid={*1{draw=black!40, line width=1.0pt}},
-				today=11,
-				today rule/.style={
-					draw=black,
-					dash pattern=on 3.5pt off 4.5pt,
-					line width=1.8pt
-				},
-				y unit chart=1cm,
-				today label font=\footnotesize\bfseries,
-				title/.style={text=black, draw=black, fill=gray!30, font=\Large\bfseries, align=center},
-				title label font=\bfseries\footnotesize,
-				title label node/.append style={below=-7pt},
-				title left shift=0.0,
-				title top shift=0.2,
-				include title in canvas=false,
-				bar label font=\mdseries\small\color{black!90},
-				bar/.append style={draw=none, fill=blue!40},
-				bar incomplete/.append style={fill=lightblue!80},
-				bar height=0.2,
-				bar label node/.append style={left=0.2cm, fill=black!10},
-				bar progress label font=\bfseries\small,
-				bar progress label font=\mdseries\footnotesize\color{black!80},
-				%	progress label text={\si{\percent}},
-				group incomplete/.append style={fill=lightblue},
-				group/.append style={
-					fill=mydarkgreen!60, % Change this color for completed group bars
-				},
-				group left shift=0,
-				group right shift=0,
-				group label font=\mdseries\bfseries\small\color{black!90},
-				group height=.3,
-				group peaks tip position=0,
-				group label node/.append style={left=0.4cm, fill=black!20},
-				group progress label font=\mdseries\footnotesize\color{black!80},
-				]{1}{12}
-				\gantttitle[
-				title label node/.append style={below left=-7pt and -7pt}
-				]{Months:\quad1}{1}
-				\gantttitlelist{2,...,12}{1} \\
-				[grid]
-				\ganttgroup[progress=61]{Macro-task 1}{1}{10} \\
-				[grid]
-				\ganttbar[
-				progress=75,
-				name=subtask1
-				]{\textbf{Subtask 1.1}}{1}{8} \\
-				[grid]
-				\ganttbar[
-				progress=47,
-				name=subtask1
-				]{\textbf{Subtask 1.2}}{4}{10}
-			\end{ganttchart}
-		\end{center}
-		\caption{Example Gantt chart for your tasks.}
-	\end{figure}
-	
-\end{itemize}
+\begin{table}[H]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3} % Adjust the vertical spacing
+		\setlength{\tabcolsep}{8pt} % Adjust the horizontal spacing
+		\begin{tabular}{|P{15cm}|}
+			\hline
+			\textbf{Task name} Development of TelePhysicalOperation (TPO) \\ \hline
+			\textbf{Scheduling}: Months 1-11 \\ \hline
+			\textbf{Performed actions}: Studied the state of art regarding teleoperation, human-robot interaction, and master-slave hardware interfaces. 
+			Developed Software Architecture for both control part and input interface 
+			Evaluation experiments on real robot\\
+			\hline
+			\textbf{Achieved results}: A Control Interface to teleoperate complex robot has been developed. Test on real platform (CENTAURO) has been validated, resulting in a publication. Presentation at the ICRA22 conference \\
+			\hline
+			\textbf{Status}: Completed\\
+			\hline
+			\textbf{Publications relative to the task}: [J.1]\\
+			\hline
+			\textbf{Revised planning}\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3} % Adjust the vertical spacing
+		\setlength{\tabcolsep}{8pt} % Adjust the horizontal spacing
+		\begin{tabular}{|P{15cm}|}
+			\hline
+			\textbf{Task name} TPO: Shared Locomanipulation \\ \hline
+			\textbf{Scheduling}: Months 11-21 \\ \hline
+			\textbf{Performed actions}: Explored and developed autonomy modules and implementation within the TelePhysicalOperation paradigm.\\
+			\hline
+			\textbf{Achieved results}: Shared control techniques implemented for locomanipulation tasks. Presentation of the works at IROS22, IRIM22 and HUMANOIDS22. \\
+			\hline
+			\textbf{Status}: Completed\\
+			\hline
+			\textbf{Publications relative to the task}: [C.3 C.4 C.5]\\
+			\hline
+			\textbf{Revised planning}\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3} % Adjust the vertical spacing
+		\setlength{\tabcolsep}{8pt} % Adjust the horizontal spacing
+		\begin{tabular}{|P{15cm}|}
+			\hline
+			\textbf{Task name} Haptic Enabled TelePhysicalOperation \\ \hline
+			\textbf{Scheduling}: Months 18-35 \\ \hline
+			\textbf{Performed actions}: Preliminary discussion to settle-up the collaboration with the other institution. Intergration of the provided haptic devices. User study with naive participants\\
+			\hline
+			\textbf{Achieved results}: An haptic-enabled teleoperation interface evaluated positively by naive participants \\
+			\hline
+			\textbf{Status}: Completed\\
+			\hline
+			\textbf{Publications relative to the task}: [C.8 \textit{submitted to}]\\
+			\hline
+			\textbf{Revised planning}\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.3} % Adjust the vertical spacing
+		\setlength{\tabcolsep}{8pt} % Adjust the horizontal spacing
+		\begin{tabular}{|P{15cm}|}
+			\hline
+			\textbf{Task name}: Laser Based Teleoperation \\ \hline
+			\textbf{Scheduling}: Months 21-33 \\ \hline
+			\textbf{Performed actions}: Exploration of vision based teleoperation interface. Studies on visual detection algorithm. Imlementation of learning-based laser detectin. Studies on BT applications. Development of the final architecture\\
+			\hline
+			\textbf{Achieved results}: A visual based teleoperation interface tested both on a complex robot (CENTAURO) and in an assistive scenario for impaired arm user\\
+			\hline
+			\textbf{Status}: Completed\\
+			\hline
+			\textbf{Publications relative to the task}: [C.6 C.7] [J.4 \textit{to be submitted}]\\
+			\hline
+			\textbf{Revised planning}\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
