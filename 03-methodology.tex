@@ -70,11 +70,12 @@
 %
 %\end{itemize}
 
-To improve the current state of the art in telerobotics, the key challenges faced by this research are permitting the control of complex robots with the a minimum efforts from the user, hence developing intuitive interfaces and providing robot autonomy features.
-Physical human robot interaction has been considered, in the development of the TelePhysicalOperation interface, which permits to control the robot by applying virtual forces. The robot complies to these virtual forces as if they were real, like in a physical human-robot interaction. The interfaces has been enhanched with shared control techniques to share the control between the operator and the robot itself: for example, while the operator commands only the velocity of the end-effector, the robot generates arm commands and mobile base commands according to the arm manipulability level, letting the end-effector to reach the goal even if it is out of the reaching of the arm. Another example is the autonomous regulation of robot arms grasping forces to keep a carried load, while taking as input just the object velocity commanded by the operator. 
-To augment the user-robot interaction haptic solutions has been explored, to let the user perceive other kind of information other than the visual ones. 
+To advance the state of the art in telerobotics, this research addresses key challenges such as enabling effortless control of complex robots, developing intuitive interfaces which includes robot autonomy features.
+In the first period, the TelePhysicalOperation interface has been developed. Later, the interface has been enhanced with some robot autonomy features to \enquote{share the control} between the operator and the robot itself: for example, while the operator commands only the velocity of the end-effector, the robot generates arm commands and mobile base commands according to the arm manipulability level, letting the end-effector to reach the goal even if it is out of the reaching of the arm.
+The interface has been further enriched by incorporating a haptic feedback channel, allowing users to perceive information beyond the visual domain. Naive users who evaluated the haptic-enabled TelePhysicalOperation positively endorsed the inclusion of haptic cues.
 
-In parallel, another kind of interface has been developed: a novel teleoperation interface based on a visual servoing guidance with an inexpensive laser device, which further simplify the user interface, but requesting more robot autonomy which has been addressed with an architecture based on Behaviour Trees~\cite{Iovino2022}. Other than with complex robots, the interface has been evaluated with a simpler fixed manipulator, but showing the potentiality of this interface as an assistive device for impaired arm users.
+Concurrently, an alternative teleoperation interface has been developed, utilizing visual servoing guidance with a laser device. The resulting user interface is very easy-to-use and intuitive, requiring more robot autonomy which has been addressed with an architecture based on Behaviour Trees~\cite{Iovino2022}.
+Other than with complex robots, the interface has been evaluated with a simpler fixed manipulator, but showing the potentiality of this interface as an assistive device for impaired arm users.
 	
 \begin{table}[H]
 	\begin{center}
@@ -130,7 +131,7 @@ In parallel, another kind of interface has been developed: a novel teleoperation
 			\hline
 			\textbf{Task name} Haptic Enabled TelePhysicalOperation \\ \hline
 			\textbf{Scheduling}: Months 18-35 \\ \hline
-			\textbf{Performed actions}: Preliminary discussion to settle-up the collaboration with the other institution. Intergration of the provided haptic devices. User study with naive participants\\
+			\textbf{Performed actions}: Exploration of haptic interfaces. Integration of the haptic devices in the TelePhysicalOperation architecture. User study with naive participants\\
 			\hline
 			\textbf{Achieved results}: An haptic-enabled teleoperation interface evaluated positively by naive participants \\
 			\hline
@@ -152,7 +153,7 @@ In parallel, another kind of interface has been developed: a novel teleoperation
 			\hline
 			\textbf{Task name}: Laser Based Teleoperation \\ \hline
 			\textbf{Scheduling}: Months 21-33 \\ \hline
-			\textbf{Performed actions}: Exploration of vision based teleoperation interface. Studies on visual detection algorithm. Imlementation of learning-based laser detectin. Studies on BT applications. Development of the final architecture\\
+			\textbf{Performed actions}: Exploration of vision based teleoperation interface. Studies on visual detection algorithm. Implementation of learning-based laser detection. Studies on BT applications. Development of the final architecture. Conduction of validation experiments.\\
 			\hline
 			\textbf{Achieved results}: A visual based teleoperation interface tested both on a complex robot (CENTAURO) and in an assistive scenario for impaired arm user\\
 			\hline
